@@ -83,11 +83,11 @@ const Footer: React.FC = () => {
           Data Structure Visualizer is an interactive tool designed to help you understand and visualize data structures and algorithms.
         </FooterText>
         <FooterText>
-          Made with <HeartIcon /> by Dheeraj Kumar
+          Made with <HeartIcon /> by Barun Kumar Singh
         </FooterText>
         <FooterLinks>
           <FooterLink 
-            href="https://github.com/dheerajkumargaur/DSA_Visualizer" 
+            href="https://github.com/Barunkrsingh" 
             target="_blank" 
             rel="noopener noreferrer" 
             aria-label="GitHub"

@@ -112,7 +112,7 @@ const Header: React.FC = () => {
         <LogoIcon>DS</LogoIcon>
         <LogoText>
           <LogoTitle>Data Structure Visualizer</LogoTitle>
-          <LogoCredit>by Dheeraj Kumar</LogoCredit>
+          <LogoCredit>by Barun Kumar Singh</LogoCredit>
         </LogoText>
       </Logo>
       <HeaderActions>
@@ -129,7 +129,7 @@ const Header: React.FC = () => {
         </ThemeToggle>
         <IconButton 
           as="a" 
-          href="https://github.com/dheerajkumargaur/DSA_Visualizer" 
+          href="https://github.com/Barunkrsingh" 
           target="_blank" 
           rel="noopener noreferrer" 
           aria-label="GitHub repository"
