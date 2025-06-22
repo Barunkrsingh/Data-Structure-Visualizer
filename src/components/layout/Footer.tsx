@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
             <FiTwitter size={20} />
           </FooterLink>
           <FooterLink 
-            href="https://linkedin.com" 
+            href="https://linkedin.com/in/barun-kr-singh-it" 
             target="_blank" 
             rel="noopener noreferrer" 
             aria-label="LinkedIn"
