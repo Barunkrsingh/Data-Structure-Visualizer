@@ -59,7 +59,7 @@ const ControlPanel = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
-  background-color: white;
+  background-color: ${props => props.theme.colors.card};
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.shadows.sm};
 `;
@@ -110,7 +110,7 @@ const TrieContainer = styled.div`
   flex-direction: column;
   gap: 1rem;
   padding: 2rem;
-  background-color: white;
+  background-color: ${props => props.theme.colors.card};
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.shadows.md};
   min-height: 500px;
@@ -152,9 +152,9 @@ const TrieNode = styled(motion.div)<{
   height: ${({ isRoot }) => isRoot ? '60px' : '40px'};
   background-color: ${({ theme, isHighlighted, isEndOfWord }) => 
     isHighlighted ? theme.colors.primary : 
-    isEndOfWord ? theme.colors.secondaryLight : 'white'};
+    isEndOfWord ? theme.colors.secondaryLight : 'Black'};
   color: ${({ theme, isHighlighted, isEndOfWord }) => 
-    (isHighlighted || isEndOfWord) ? 'white' : theme.colors.gray800};
+    (isHighlighted || isEndOfWord) ? 'green' : theme.colors.gray800};
   border-radius: 50%;
   font-family: ${({ theme }) => theme.fonts.mono};
   font-weight: 600;
@@ -203,9 +203,9 @@ const WordItem = styled.div<{ isHighlighted?: boolean }>`
   align-items: center;
   padding: 0.5rem 1rem;
   background-color: ${({ theme, isHighlighted }) => 
-    isHighlighted ? theme.colors.primary : 'white'};
+    isHighlighted ? theme.colors.primary : '#34d399'};
   color: ${({ theme, isHighlighted }) => 
-    isHighlighted ? 'white' : theme.colors.gray800};
+    isHighlighted ? 'green' : theme.colors.gray800};
   border-radius: ${({ theme }) => theme.borderRadius};
   font-family: ${({ theme }) => theme.fonts.mono};
   font-weight: 500;
@@ -222,14 +222,14 @@ const CodeBlock = styled.div`
 const CodeTitle = styled.div`
   padding: 0.75rem 1rem;
   background-color: #333;
-  color: white;
+  background-color: ${props => props.theme.colors.card};
   font-family: ${({ theme }) => theme.fonts.mono};
   font-size: 0.875rem;
 `;
 
 const InfoPanel = styled.div`
   padding: 1rem;
-  background-color: white;
+  background-color: ${props => props.theme.colors.card};
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.shadows.sm};
 `;

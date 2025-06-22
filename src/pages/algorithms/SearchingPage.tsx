@@ -59,7 +59,7 @@ const ControlPanel = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.background};
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.shadows.sm};
 `;
@@ -121,7 +121,7 @@ const VisualizerArea = styled.div`
   flex-direction: column;
   gap: 1rem;
   padding: 2rem;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.background};
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.shadows.md};
   min-height: 400px;
@@ -151,7 +151,7 @@ const ArrayElement = styled(motion.div)<{
     isTarget ? theme.colors.secondary :
     isCurrent ? theme.colors.primary :
     isSorted ? theme.colors.primaryLight :
-    'white'};
+    'light'};
   color: ${({ theme, isTarget, isCurrent, isFound }) => 
     (isTarget || isCurrent || isFound) ? 'white' : theme.colors.gray800};
   border-radius: ${({ theme }) => theme.borderRadius};
@@ -200,7 +200,7 @@ const CodeTitle = styled.div`
 
 const InfoPanel = styled.div`
   padding: 1rem;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.background};
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.shadows.sm};
 `;
@@ -230,7 +230,7 @@ const Select = styled.select`
   padding: 0.5rem;
   border: 1px solid ${({ theme }) => theme.colors.gray300};
   border-radius: ${({ theme }) => theme.borderRadius};
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.background};
   font-family: ${({ theme }) => theme.fonts.sans};
   cursor: pointer;
 `;

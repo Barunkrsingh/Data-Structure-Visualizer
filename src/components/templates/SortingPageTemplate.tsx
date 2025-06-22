@@ -78,14 +78,14 @@ const ContentContainer = styled.div`
 `;
 
 const VisualizationContainer = styled.div`
-  background-color: white;
+  background-color: ${props => props.theme.colors.card};
   border-radius: ${({ theme }) => theme.borderRadius};
   padding: 2rem;
   box-shadow: ${({ theme }) => theme.shadows.md};
 `;
 
 const CodeContainer = styled.div`
-  background-color: white;
+  background-color: ${props => props.theme.colors.card};
   border-radius: ${({ theme }) => theme.borderRadius};
   padding: 2rem;
   box-shadow: ${({ theme }) => theme.shadows.md};
@@ -103,8 +103,8 @@ const ControlButton = styled.button<{ active?: boolean }>`
   align-items: center;
   justify-content: center;
   padding: 0.5rem 1rem;
-  background-color: ${({ active, theme }) => active ? theme.colors.primary : 'white'};
-  color: ${({ active, theme }) => active ? 'white' : theme.colors.gray700};
+  background-color: ${({ active, theme }) => active ? theme.colors.primary : 'light'};
+  color: ${({ active, theme }) => active ? 'black' : theme.colors.gray700};
   border: 1px solid ${({ theme }) => theme.colors.gray300};
   border-radius: ${({ theme }) => theme.borderRadius};
   font-size: 0.9rem;
@@ -140,7 +140,7 @@ const SpeedSelect = styled.select`
   padding: 0.5rem;
   border: 1px solid ${({ theme }) => theme.colors.gray300};
   border-radius: ${({ theme }) => theme.borderRadius};
-  background-color: white;
+  background-color: ${props => props.theme.colors.card};
   font-size: 0.9rem;
 `;
 

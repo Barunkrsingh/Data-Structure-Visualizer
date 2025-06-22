@@ -1,24 +1,24 @@
 export const lightTheme = {
   colors: {
-    primary: '#10B981',             // green-500 (primary green)
-    primaryLight: '#34D399',        // green-400
-    primaryDark: '#059669',         // green-600
+    primary: '#10B981',
+    primaryLight: '#34D399',
+    primaryDark: '#059669',
 
-    secondary: '#111827',           // blackish dark gray for contrast
+    secondary: '#111827',
     secondaryLight: '#1F2937',
     secondaryDark: '#0F172A',
 
-    background: '#F4F4F5',          // cool white-gray background
-    foreground: '#111827',          // dark gray text
-    card: '#FFFFFF',                // pure white cards
-    text: '#111827',                // dark text for readability
-    textLight: '#6B7280',           // muted gray text
-    border: '#E5E7EB',              // light border gray
-    hover: '#E0F2F1',               // soft green hover
+    background: '#F3F4F6',
+    foreground: '#111827',
+    card: '#FFFFFF',
+    text: '#111827',
+    textLight: '#6B7280',
+    border: '#E5E7EB',
+    hover: '#ECFDF5',
 
-    error: '#DC2626',
-    highlight: '#22C55E',           // lime green highlight
-    accent: '#16A34A',              // deep green
+    error: '#EF4444',
+    highlight: '#22C55E',
+    accent: '#16A34A',
 
     gray50: '#F9FAFB',
     gray100: '#F3F4F6',
@@ -36,15 +36,13 @@ export const lightTheme = {
     success: '#10B981',
     info: '#14B8A6',
   },
-
   fonts: {
-    sans: "'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    sans: "'Poppins', sans-serif",
     mono: "'Roboto Mono', monospace",
     body: "'Poppins', sans-serif",
     heading: "'Poppins', sans-serif",
     code: "'Roboto Mono', monospace",
   },
-
   fontSizes: {
     xs: '0.75rem',
     sm: '0.875rem',
@@ -53,33 +51,27 @@ export const lightTheme = {
     xl: '1.25rem',
     xxl: '1.5rem',
   },
-
   fontWeights: {
     normal: 400,
     medium: 500,
     bold: 700,
   },
-
   lineHeights: {
     body: 1.5,
     heading: 1.2,
   },
-
   borderRadius: '8px',
-
   shadows: {
-    sm: '0 1px 2px rgba(0, 0, 0, 0.04)',
-    md: '0 2px 4px rgba(0, 0, 0, 0.06)',
-    lg: '0 4px 8px rgba(0, 0, 0, 0.08)',
-    xl: '0 12px 16px rgba(0, 0, 0, 0.1)',
+    sm: '0 1px 2px rgba(0, 0, 0, 0.05)',
+    md: '0 2px 4px rgba(0, 0, 0, 0.08)',
+    lg: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    xl: '0 12px 16px rgba(0, 0, 0, 0.12)',
   },
-
   transitions: {
     default: 'all 0.2s ease-in-out',
     fast: 'all 0.1s ease-in-out',
     slow: 'all 0.3s ease-in-out',
   },
-
   breakpoints: {
     xs: '480px',
     sm: '640px',

@@ -59,7 +59,13 @@ const ControlPanel = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
-  background-color: white;
+   background-color: ${props => props.theme.colors.card};
+  border-radius: 3.75rem;
+  padding: 3.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid ${props => props.theme.colors.border};
+  text-decoration: none;
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.shadows.sm};
 `;
@@ -85,7 +91,7 @@ const Button = styled.button<{ variant?: 'primary' | 'secondary' | 'danger' }>`
   padding: 0.5rem 1rem;
   background-color: ${({ theme, variant }) => 
     variant === 'primary' ? theme.colors.primary : 
-    variant === 'secondary' ? theme.colors.secondary : 
+    variant === 'secondary' ? theme.colors.primary : 
     variant === 'danger' ? theme.colors.danger : 
     theme.colors.gray200};
   color: ${({ variant }) => variant ? 'white' : 'inherit'};
@@ -110,7 +116,13 @@ const PriorityQueueContainer = styled.div`
   flex-direction: column;
   gap: 1rem;
   padding: 2rem;
-  background-color: white;
+   background-color: ${props => props.theme.colors.card};
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid ${props => props.theme.colors.border};
+  text-decoration: none;
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.shadows.md};
   min-height: 500px;
@@ -200,11 +212,13 @@ const QueueArrayItem = styled.div<{ isHighlighted?: boolean }>`
   justify-content: center;
   width: 80px;
   height: 50px;
-  background-color: ${({ theme, isHighlighted }) => 
-    isHighlighted ? theme.colors.primary : 'white'};
-  color: ${({ theme, isHighlighted }) => 
-    isHighlighted ? 'white' : theme.colors.gray800};
-  border-radius: ${({ theme }) => theme.borderRadius};
+  background-color: ${props => props.theme.colors.card};
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid ${props => props.theme.colors.border};
+  text-decoration: none;
   font-family: ${({ theme }) => theme.fonts.mono};
   font-weight: 600;
   border: 1px solid ${({ theme, isHighlighted }) => 
@@ -229,14 +243,20 @@ const CodeBlock = styled.div`
 const CodeTitle = styled.div`
   padding: 0.75rem 1rem;
   background-color: #333;
-  color: white;
-  font-family: ${({ theme }) => theme.fonts.mono};
+   background-color: ${props => props.theme.colors.card};
+   font-family: ${({ theme }) => theme.fonts.mono};
   font-size: 0.875rem;
 `;
 
 const InfoPanel = styled.div`
   padding: 1rem;
-  background-color: white;
+  background-color: ${props => props.theme.colors.card};
+  border-radius: 3.75rem;
+  padding: 2.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid ${props => props.theme.colors.border};
+  text-decoration: none;
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.shadows.sm};
 `;

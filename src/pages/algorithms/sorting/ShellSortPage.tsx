@@ -82,7 +82,7 @@ const PageDescription = styled.p`
 `;
 
 const VisualizationContainer = styled.div`
-  background-color: white;
+    background-color: ${({ theme }) => theme.colors.background};
   border-radius: ${({ theme }) => theme.borderRadius};
   padding: 1rem;
   
@@ -113,7 +113,7 @@ const Button = styled.button<{ active?: boolean }>`
   padding: 0.5rem;
   border: 1px solid ${({ theme }) => theme.colors.gray200};
   border-radius: ${({ theme }) => theme.borderRadius};
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme, active }) => active ? theme.colors.primary : theme.colors.gray700};
   cursor: pointer;
   font-size: 0.8rem;
@@ -166,7 +166,7 @@ const SpeedSelect = styled.select`
   padding: 0.5rem;
   border: 1px solid ${({ theme }) => theme.colors.gray300};
   border-radius: ${({ theme }) => theme.borderRadius};
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.background};
   font-size: 0.8rem;
   
   @media (min-width: 768px) {

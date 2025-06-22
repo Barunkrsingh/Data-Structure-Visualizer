@@ -37,7 +37,7 @@ const AlgorithmsContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background-color: white;
+  background-color: ${props => props.theme.colors.card};
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.shadows.md};
 `;
@@ -53,7 +53,7 @@ const AlgorithmCard = styled(Link)`
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
-  background-color: white;
+  background-color: ${props => props.theme.colors.card};
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.shadows.sm};
   border: 1px solid ${({ theme }) => theme.colors.gray200};
@@ -143,7 +143,7 @@ const DropdownContent = styled.div<{ isOpen: boolean }>`
   width: 100%;
   max-height: ${({ isOpen }) => (isOpen ? '300px' : '0')};
   overflow-y: auto;
-  background-color: white;
+ background-color: ${props => props.theme.colors.card};
   border-radius: 0 0 ${({ theme }) => theme.borderRadius} ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.shadows.md};
   z-index: 10;

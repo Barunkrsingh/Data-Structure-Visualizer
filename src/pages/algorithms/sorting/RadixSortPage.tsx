@@ -51,7 +51,7 @@ const PageDescription = styled.p`
 `;
 
 const VisualizationContainer = styled.div`
-  background-color: white;
+ background-color: ${({ theme }) => theme.colors.background};
   border-radius: ${({ theme }) => theme.borderRadius};
   padding: 2rem;
 `;
@@ -70,7 +70,7 @@ const Button = styled.button<{ active?: boolean }>`
   padding: 0.5rem 1rem;
   border: 1px solid ${({ theme }) => theme.colors.gray200};
   border-radius: ${({ theme }) => theme.borderRadius};
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme, active }) => active ? theme.colors.primary : theme.colors.gray700};
   cursor: pointer;
   font-size: 0.9rem;
@@ -105,7 +105,7 @@ const SpeedSelect = styled.select`
   padding: 0.5rem;
   border: 1px solid ${({ theme }) => theme.colors.gray300};
   border-radius: ${({ theme }) => theme.borderRadius};
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.background};
   font-size: 0.9rem;
 `;
 
@@ -211,7 +211,7 @@ const Bucket = styled.div<{ isActive: boolean }>`
     isActive ? theme.colors.primary : theme.colors.gray300};
   border-radius: ${({ theme }) => theme.borderRadius};
   background-color: ${({ theme, isActive }) => 
-    isActive ? theme.colors.primaryLight : 'white'};
+    isActive ? theme.colors.primaryLight : 'light'};
 `;
 
 const BucketLabel = styled.div`

@@ -59,7 +59,7 @@ const ControlPanel = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
-  background-color: white;
+  background-color: ${props => props.theme.colors.card};
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.shadows.sm};
 `;
@@ -85,7 +85,7 @@ const Button = styled.button<{ variant?: 'primary' | 'secondary' | 'danger' }>`
   padding: 0.5rem 1rem;
   background-color: ${({ theme, variant }) => 
     variant === 'primary' ? theme.colors.primary : 
-    variant === 'secondary' ? theme.colors.secondary : 
+    variant === 'secondary' ? theme.colors.primary : 
     variant === 'danger' ? theme.colors.danger : 
     theme.colors.gray200};
   color: ${({ variant }) => variant ? 'white' : 'inherit'};
@@ -110,7 +110,7 @@ const HashTableContainer = styled.div`
   flex-direction: column;
   gap: 1rem;
   padding: 2rem;
-  background-color: white;
+  background-color: ${props => props.theme.colors.card};
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.shadows.md};
   min-height: 500px;
@@ -216,7 +216,7 @@ const CodeTitle = styled.div`
 
 const InfoPanel = styled.div`
   padding: 1rem;
-  background-color: white;
+  background-color: ${props => props.theme.colors.card};
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.shadows.sm};
 `;

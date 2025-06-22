@@ -59,10 +59,11 @@ const ControlPanel = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.background}; // Dynamic color
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.shadows.sm};
 `;
+
 
 const InputGroup = styled.div`
   display: flex;
@@ -85,7 +86,7 @@ const Button = styled.button<{ variant?: 'primary' | 'secondary' | 'danger' }>`
   padding: 0.5rem 1rem;
   background-color: ${({ theme, variant }) => 
     variant === 'primary' ? theme.colors.primary : 
-    variant === 'secondary' ? theme.colors.secondary : 
+    variant === 'secondary' ? theme.colors.primary : 
     variant === 'danger' ? theme.colors.danger : 
     theme.colors.gray200};
   color: ${({ variant }) => variant ? 'white' : 'inherit'};
@@ -110,13 +111,14 @@ const ArrayContainer = styled.div`
   flex-wrap: wrap;
   gap: 0.5rem;
   padding: 2rem;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.background};
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.shadows.md};
   min-height: 200px;
   align-items: center;
   justify-content: center;
 `;
+
 
 const ArrayElement = styled(motion.div)<{ isHighlighted?: boolean }>`
   display: flex;
@@ -150,17 +152,26 @@ const CodeBlock = styled.div`
 
 const CodeTitle = styled.div`
   padding: 0.75rem 1rem;
-  background-color: #333;
-  color: white;
+   background-color: ${props => props.theme.colors.card};
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid ${props => props.theme.colors.border};
+  text-decoration: none;
   font-family: ${({ theme }) => theme.fonts.mono};
   font-size: 0.875rem;
 `;
 
 const InfoPanel = styled.div`
   padding: 1rem;
-  background-color: white;
-  border-radius: ${({ theme }) => theme.borderRadius};
-  box-shadow: ${({ theme }) => theme.shadows.sm};
+   background-color: ${props => props.theme.colors.card};
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid ${props => props.theme.colors.border};
+  text-decoration: none;
 `;
 
 const InfoTitle = styled.h3`
@@ -174,19 +185,7 @@ const InfoContent = styled.div`
   color: ${({ theme }) => theme.colors.gray600};
   line-height: 1.6;
   
-  ul {
-    padding-left: 1.5rem;
-    margin-top: 0.5rem;
-  }
   
-  li {
-    margin-bottom: 0.25rem;
-    color: black;
-  }
-  
-  strong {
-    color: black;
-  }
 `;
 
 // Array Page Component

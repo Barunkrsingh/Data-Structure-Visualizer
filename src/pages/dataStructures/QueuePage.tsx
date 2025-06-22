@@ -59,8 +59,13 @@ const ControlPanel = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
-  background-color: white;
-  border-radius: ${({ theme }) => theme.borderRadius};
+   background-color: ${props => props.theme.colors.card};
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid ${props => props.theme.colors.border};
+  text-decoration: none;
   box-shadow: ${({ theme }) => theme.shadows.sm};
 `;
 
@@ -85,7 +90,7 @@ const Button = styled.button<{ variant?: 'primary' | 'secondary' | 'danger' }>`
   padding: 0.5rem 1rem;
   background-color: ${({ theme, variant }) => 
     variant === 'primary' ? theme.colors.primary : 
-    variant === 'secondary' ? theme.colors.secondary : 
+    variant === 'secondary' ? theme.colors.primary : 
     variant === 'danger' ? theme.colors.danger : 
     theme.colors.gray200};
   color: ${({ variant }) => variant ? 'white' : 'inherit'};
@@ -110,8 +115,13 @@ const QueueContainer = styled.div`
   flex-direction: column;
   gap: 1rem;
   padding: 2rem;
-  background-color: white;
-  border-radius: ${({ theme }) => theme.borderRadius};
+   background-color: ${props => props.theme.colors.card};
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid ${props => props.theme.colors.border};
+  text-decoration: none;
   box-shadow: ${({ theme }) => theme.shadows.md};
   min-height: 300px;
 `;
@@ -203,8 +213,13 @@ const CodeTitle = styled.div`
 
 const InfoPanel = styled.div`
   padding: 1rem;
-  background-color: white;
-  border-radius: ${({ theme }) => theme.borderRadius};
+   background-color: ${props => props.theme.colors.card};
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid ${props => props.theme.colors.border};
+  text-decoration: none;
   box-shadow: ${({ theme }) => theme.shadows.sm};
 `;
 

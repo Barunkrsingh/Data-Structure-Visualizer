@@ -59,9 +59,13 @@ const ControlPanel = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
-  background-color: white;
-  border-radius: ${({ theme }) => theme.borderRadius};
-  box-shadow: ${({ theme }) => theme.shadows.sm};
+   background-color: ${props => props.theme.colors.card};
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid ${props => props.theme.colors.border};
+  text-decoration: none;
 `;
 
 const InputGroup = styled.div`
@@ -85,7 +89,7 @@ const Button = styled.button<{ variant?: 'primary' | 'secondary' | 'danger' }>`
   padding: 0.5rem 1rem;
   background-color: ${({ theme, variant }) => 
     variant === 'primary' ? theme.colors.primary : 
-    variant === 'secondary' ? theme.colors.secondary : 
+    variant === 'secondary' ? theme.colors.primary : 
     variant === 'danger' ? theme.colors.danger : 
     theme.colors.gray200};
   color: ${({ variant }) => variant ? 'white' : 'inherit'};
@@ -110,10 +114,13 @@ const LinkedListContainer = styled.div`
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
-  background-color: white;
-  border-radius: ${({ theme }) => theme.borderRadius};
-  box-shadow: ${({ theme }) => theme.shadows.md};
-  min-height: 200px;
+   background-color: ${props => props.theme.colors.card};
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid ${props => props.theme.colors.border};
+  text-decoration: none;
 `;
 
 const LinkedListRow = styled.div`
@@ -135,11 +142,13 @@ const Node = styled.div<{ isHighlighted?: boolean }>`
   justify-content: center;
   width: 60px;
   height: 60px;
-  background-color: ${({ theme, isHighlighted }) => 
-    isHighlighted ? theme.colors.primary : theme.colors.gray100};
-  color: ${({ theme, isHighlighted }) => 
-    isHighlighted ? 'white' : theme.colors.gray800};
-  border-radius: ${({ theme }) => theme.borderRadius};
+   background-color: ${props => props.theme.colors.card};
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid ${props => props.theme.colors.border};
+  text-decoration: none;
   font-family: ${({ theme }) => theme.fonts.mono};
   font-weight: 600;
   font-size: 1.25rem;
@@ -204,9 +213,13 @@ const CodeTitle = styled.div`
 
 const InfoPanel = styled.div`
   padding: 1rem;
-  background-color: white;
-  border-radius: ${({ theme }) => theme.borderRadius};
-  box-shadow: ${({ theme }) => theme.shadows.sm};
+   background-color: ${props => props.theme.colors.card};
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid ${props => props.theme.colors.border};
+  text-decoration: none;
 `;
 
 const InfoTitle = styled.h3`

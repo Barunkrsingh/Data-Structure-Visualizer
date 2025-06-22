@@ -59,8 +59,13 @@ const ControlPanel = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
-  background-color: white;
-  border-radius: ${({ theme }) => theme.borderRadius};
+   background-color: ${props => props.theme.colors.card};
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid ${props => props.theme.colors.border};
+  text-decoration: none;
   box-shadow: ${({ theme }) => theme.shadows.sm};
 `;
 
@@ -110,8 +115,13 @@ const StackContainer = styled.div`
   flex-direction: column;
   gap: 1rem;
   padding: 2rem;
-  background-color: white;
-  border-radius: ${({ theme }) => theme.borderRadius};
+   background-color: ${props => props.theme.colors.card};
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid ${props => props.theme.colors.border};
+  text-decoration: none;
   box-shadow: ${({ theme }) => theme.shadows.md};
   min-height: 400px;
 `;
@@ -181,15 +191,25 @@ const CodeBlock = styled.div`
 const CodeTitle = styled.div`
   padding: 0.75rem 1rem;
   background-color: #333;
-  color: white;
-  font-family: ${({ theme }) => theme.fonts.mono};
+   background-color: ${props => props.theme.colors.card};
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid ${props => props.theme.colors.border};
+  text-decoration: none;
   font-size: 0.875rem;
 `;
 
 const InfoPanel = styled.div`
   padding: 1rem;
-  background-color: white;
-  border-radius: ${({ theme }) => theme.borderRadius};
+   background-color: ${props => props.theme.colors.card};
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid ${props => props.theme.colors.border};
+  text-decoration: none;
   box-shadow: ${({ theme }) => theme.shadows.sm};
 `;
 

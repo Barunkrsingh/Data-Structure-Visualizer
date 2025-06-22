@@ -27,15 +27,15 @@ const NavigationRow = styled.div`
 const BackButton = styled(Link)`
   display: flex;
   align-items: center;
-  color: ${props => props.theme.colors.primary};
+  color: ${({ theme }) => theme.colors.primary};
   font-weight: 500;
   text-decoration: none;
   margin-right: 1rem;
-  
+
   &:hover {
     text-decoration: underline;
   }
-  
+
   svg {
     margin-right: 0.5rem;
   }
@@ -48,7 +48,7 @@ const PageHeader = styled.div`
 const PageTitle = styled.h1`
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  color: ${props => props.theme.colors.text};
+  color: ${({ theme }) => theme.colors.text};
 
   @media (max-width: 768px) {
     font-size: 2rem;
@@ -57,7 +57,7 @@ const PageTitle = styled.h1`
 
 const Description = styled.p`
   font-size: 1rem;
-  color: ${props => props.theme.colors.textLight};
+  color: ${({ theme }) => theme.colors.textLight};
   max-width: 800px;
   line-height: 1.6;
   margin-bottom: 2rem;
@@ -78,18 +78,19 @@ const VisualizationSection = styled.div`
 
 const InfoCard = styled.div`
   padding: 1.5rem;
-  background-color: ${props => props.theme.colors.card};
-  border-radius: ${props => props.theme.borderRadius};
-  box-shadow: ${props => props.theme.shadows.sm};
+  background-color: ${({ theme }) => theme.colors.card};
+  border-radius: ${({ theme }) => theme.borderRadius};
+  box-shadow: ${({ theme }) => theme.shadows.sm};
   margin-bottom: 1.5rem;
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 const InfoTitle = styled.h3`
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: ${props => props.theme.colors.text};
+  color: ${({ theme }) => theme.colors.text};
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid ${props => props.theme.colors.border};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
 `;
 
 const ComplexityTable = styled.table`
@@ -100,21 +101,23 @@ const ComplexityTable = styled.table`
 
 const ComplexityRow = styled.tr`
   &:nth-child(even) {
-    background-color: ${props => props.theme.colors.background};
+    background-color: ${({ theme }) => theme.colors.background};
   }
 `;
 
 const ComplexityCell = styled.td`
   padding: 0.5rem;
-  border: 1px solid ${props => props.theme.colors.border};
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 const ComplexityHeader = styled.th`
   padding: 0.5rem;
   text-align: left;
-  background-color: ${props => props.theme.colors.background};
-  border: 1px solid ${props => props.theme.colors.border};
+  background-color: ${({ theme }) => theme.colors.background};
+  border: 1px solid ${({ theme }) => theme.colors.border};
   font-weight: 500;
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 interface GraphProblemTemplateProps {
@@ -137,16 +140,14 @@ const GraphProblemTemplate: React.FC<GraphProblemTemplateProps> = ({
           <FaArrowLeft /> Back to Algorithms
         </BackButton>
       </NavigationRow>
-      
+
       <PageHeader>
         <PageTitle>{algorithmInfo.name}</PageTitle>
         <Description>{algorithmInfo.description}</Description>
       </PageHeader>
-      
-      <VisualizationSection>
-        {visualizationComponent}
-      </VisualizationSection>
-      
+
+      <VisualizationSection>{visualizationComponent}</VisualizationSection>
+
       <Tabs defaultTab="problem">
         <TabContent label="Problem" value="problem">
           <ContentSection>
@@ -155,7 +156,7 @@ const GraphProblemTemplate: React.FC<GraphProblemTemplateProps> = ({
             </InfoCard>
           </ContentSection>
         </TabContent>
-        
+
         <TabContent label="Complexity" value="complexity">
           <ContentSection>
             <InfoCard>
@@ -198,7 +199,7 @@ const GraphProblemTemplate: React.FC<GraphProblemTemplateProps> = ({
             </InfoCard>
           </ContentSection>
         </TabContent>
-        
+
         <TabContent label="Code" value="code">
           <ContentSection>
             <Tabs defaultTab="javascript">
@@ -210,12 +211,10 @@ const GraphProblemTemplate: React.FC<GraphProblemTemplateProps> = ({
             </Tabs>
           </ContentSection>
         </TabContent>
-        
+
         {additionalInfo && (
           <TabContent label="More Info" value="more-info">
-            <ContentSection>
-              {additionalInfo}
-            </ContentSection>
+            <ContentSection>{additionalInfo}</ContentSection>
           </TabContent>
         )}
       </Tabs>
@@ -223,4 +222,4 @@ const GraphProblemTemplate: React.FC<GraphProblemTemplateProps> = ({
   );
 };
 
-export default GraphProblemTemplate; 
+export default GraphProblemTemplate;

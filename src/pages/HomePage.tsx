@@ -41,21 +41,22 @@ const CTAButton = styled(Link)`
   display: inline-flex;
   align-items: center;
   padding: 0.75rem 1.5rem;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.card};         // Themed background
   color: ${({ theme }) => theme.colors.primary};
   font-weight: 600;
   border-radius: ${({ theme }) => theme.borderRadius};
   transition: ${({ theme }) => theme.transitions.default};
-  
+
   svg {
     margin-left: 0.5rem;
   }
-  
+
   &:hover {
-    background-color: ${({ theme }) => theme.colors.gray100};
+    background-color: ${({ theme }) => theme.colors.hover};      // Themed hover
     transform: translateY(-2px);
   }
 `;
+
 
 const FeaturesSection = styled.section`
   display: grid;
@@ -75,17 +76,16 @@ const FeatureCard = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.card}; /* dynamic background */
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.shadows.md};
   transition: ${({ theme }) => theme.transitions.default};
-  
+
   &:hover {
     transform: translateY(-5px);
     box-shadow: ${({ theme }) => theme.shadows.lg};
   }
 `;
-
 const FeatureIcon = styled.div`
   display: flex;
   align-items: center;
@@ -93,10 +93,11 @@ const FeatureIcon = styled.div`
   width: 48px;
   height: 48px;
   background-color: ${({ theme }) => theme.colors.primary};
-  color: white;
+  color: ${({ theme }) => theme.colors.card};  // Use theme-based color instead of hardcoded white
   border-radius: ${({ theme }) => theme.borderRadius};
   margin-bottom: 1rem;
 `;
+
 
 const FeatureTitle = styled.h3`
   font-size: 1.25rem;
@@ -139,29 +140,32 @@ const DataStructureCard = styled(Link)`
   flex-direction: column;
   align-items: center;
   padding: 1.5rem;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.card}; // Light or dark card
+  color: ${({ theme }) => theme.colors.text}; // Default text color
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.shadows.sm};
   transition: ${({ theme }) => theme.transitions.default};
   position: relative;
-  
+
   &:hover {
     background-color: ${({ theme }) => theme.colors.primary};
-    color: white;
+    color: ${({ theme }) => theme.colors.card}; // Use theme-based contrast color
+
     transform: translateY(-3px);
-    
+
     p {
-      color: rgba(255, 255, 255, 0.8);
+      color: ${({ theme }) => theme.colors.textLight}; // Soft light text
     }
   }
 `;
+
 
 const ComingSoonBadge = styled.div`
   position: absolute;
   top: 10px;
   right: 10px;
   background-color: ${({ theme }) => theme.colors.secondary};
-  color: white;
+  color: ${({ theme }) => theme.colors.card}; // Light in dark-mode, dark in light-mode
   font-size: 0.7rem;
   font-weight: 600;
   padding: 0.25rem 0.5rem;
